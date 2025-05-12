@@ -1,2 +1,4 @@
 console.log("### Playground ###")
-console.log("Hat geklappt!")
+console.warn("Warnings ausgeben!")
+console.error("Fehler ausgeben!")
+

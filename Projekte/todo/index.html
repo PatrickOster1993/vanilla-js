@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do Liste</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        li.done { text-decoration: line-through; color: gray; }
+        button { margin-left: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Meine To-Do Liste</h1>
+    <input type="text" id="taskInput" placeholder="Neue Aufgabe..." />
+    <button onclick="addTask()">Hinzufügen</button>
+
+    <ul id="taskList"></ul>
+
+    <script src="todo.js"></script>
+</body>
+</html>
