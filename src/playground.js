@@ -271,3 +271,20 @@ function myReplacementFunc(oldSub, newSub) {
 myReplacementFunc("DAA", "Welt")
 myReplacementFunc("DOO", "Welt")
 myReplacementFunc("Hallo", "Servus")
+
+// Advanced Stuff
+
+//// Set-Datentyp:
+let uniqueVals = new Set([1, 2, 3, 3, 2, 1])
+console.log(uniqueVals)
+
+//// Symbol-Datentyp:
+let id1 = Symbol("id")
+let id2 = Symbol("id")
+
+let id3 = "id"
+let id4 = "id"
+
+console.log(id1, id2)
+console.log(id1 == id2) // false! Symbole sind immer einzigartig!!!
+console.log(id3 == id4) // true! Andere Datentypen sind NICHT einzigartig!!!
