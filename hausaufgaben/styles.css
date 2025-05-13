@@ -1,0 +1,57 @@
+.muster{
+    background-image: url("punk_background.jpg");
+}
+
+.punk{
+    background-image: url("punks_not_dead.jpg");
+}
+
+.rubik-glitch-regular {
+    font-family: "Rubik Glitch", system-ui;
+    text-shadow:
+    -4px -4px 0 black,
+    4px -4px 0 black,
+    -4px 4px 0 black,
+    4px 4px 0 black;
+    font-style: normal;
+    color: crimson;
+  }
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+a{
+    color: crimson;
+    font-size: 3rem;
+    margin: 85px;
+}
+
+.concerts {
+    margin: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1em 1em;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    justify-items: space-evenly;
+    align-items: space-evenly;
+    grid-template-areas:
+        ". . ."
+        ". . ."
+    ;
+
+    .concert {
+        background-color: black;
+        border: 2px solid black;
+        box-shadow: 13px 13px 50px whitesmoke inset;
+        border-radius: 16px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 2rem;
+        
+    }
+}
