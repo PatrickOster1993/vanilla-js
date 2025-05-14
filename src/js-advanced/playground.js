@@ -96,9 +96,135 @@ const teilnehmer = ["Anna", "Ben", "Carla", "David", "Emma"]
 // Aufgabenstellung:
 // a) Schreiben Sie eine Funktion, die die ersten beiden Teilnehmer über die Konsele begrüßt (Rest soll einfach nur in Konsole ausgegeben werden)!
 
+function greetPeople(first, second, ...rest) {
+  console.log(`Hallo ${first} und hallo ${second}!`)
+  console.log(rest)
+}
+
+greetPeople(...teilnehmer)
+
 const gruppe1 = ["Lisa", "Tom"]
 const gruppe2 = ["Max", "Nina"]
 
 // b) Erstellen Sie ein neues Array, das beide Gruppen zusammenlegt und daraus eine große Gruppe macht
 
+const gruppe = [...gruppe1, ...gruppe2]
+console.log(gruppe)
+
 // c) Erstellen Sie nun ein neues Array, in dem Sie die Gruppe nun mit den Teilnehmern zusammenführen und geben Sie alle Teilnehmer untereinander in der Konsole aus!
+
+const alle = [...teilnehmer, ...gruppe]
+
+for (einzeln of alle) {
+  console.log(einzeln)
+}
+
+// Alternativ:
+alle.forEach((one) => console.log(one)) // (*)
+
+// ### 5. Arrow-Functions ###
+
+function quadriereFunction(x) {
+  return x * x
+}
+
+const quadriereArrow = (x) => x * x
+
+console.log("Normal:", quadriereFunction(4))
+console.log("Arrow:", quadriereArrow(4))
+
+// ###### 5a: Array-Methoden: ######
+
+// 1. forEach() -> s. (*)
+
+// 2. map():
+const zahlenListe = [1, 2, 3, 4, 5]
+
+const verdoppelt = zahlenListe.map((x) => 2 * x)
+console.log(verdoppelt)
+
+// funktioniert nicht -> 'undefined', da forEach nichts zurückgibt!
+const forEachVerdoppelt = zahlenListe.forEach((x) => 2 * x)
+console.log(forEachVerdoppelt)
+
+// wir sind in der Lage ein Array zu jedem beliebigen "Datentyp-Array" zu mappen!
+const anonymerNutzer = zahlenListe.map((x) => {
+  return `Nutzer ${x}`
+})
+console.log(anonymerNutzer)
+
+// const reactBeispiel = zahlenListe.map((x) => {
+//   return (
+//     <div>
+//       <p>{`Nutzer ${x}`}</p>
+//     </div>
+//   )
+// })
+
+// 3. filter():
+// nach Logik in Arrow-Funktion gefiltertes Array wird zurückgegeben!
+const geradeZahlen = zahlenListe.filter((x) => x % 2 == 0)
+console.log(geradeZahlen)
+
+// 4. reduce():
+const summe = zahlenListe.reduce((acc, curr) => acc + curr, 5) // 5 entspricht Startwert für Akkumulator!
+console.log(summe)
+
+// ### 6. Klassen ###
+
+// Anlehnung an Python:
+// class Tier:
+//     def __init__(self, name):
+//         self.name = name
+
+class Tier {
+  constructor(name) {
+    // Konstruktor
+    this.name = name
+  }
+
+  sprich() {
+    // Methode
+    console.log(`${this.name} gibt Laut von sich!`)
+  }
+}
+
+class Hund extends Tier {
+  sprich() {
+    console.log(`${this.name} bellt!`)
+  }
+}
+
+const meinHund = new Hund("Lassy")
+meinHund.sprich()
+
+// ### 7. Exception-Handling ###
+function teile(a, b) {
+  try {
+    if (b == 0) throw new Error("Division by zero!")
+    return a / b
+  } catch (fehler) {
+    console.error("Fehler:", fehler.message)
+    return null
+  }
+}
+
+console.log(teile(3, 0))
+
+// Allgemein
+try {
+  // mein Code
+} catch (error) {
+  console.error("Error:", error.message)
+} finally {
+  // wird danach ausgeführt
+}
+
+// ### 8. Abschließende Übung ###
+
+// Aufgabenstellung:
+// - Erstellen Sie ein Array mit mehreren Aufgaben (als Object mit den Eigenschaften "text" und "erledigt")
+//     z. B. text: "Einkaufen gehen" ... erledigt: false
+// - filtern Sie die noch ausstehenden Aufgaben (filter())!
+// - geben Sie all diese gefilterten Aufgaben als Text in die Console aus (untereinander -> map(), template literals)
+// - Alle möglichen Fehler immer schön abfangen!
