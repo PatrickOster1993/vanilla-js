@@ -229,20 +229,4 @@ try {
 // - geben Sie all diese gefilterten Aufgaben als Text in die Console aus (untereinander -> map(), template literals)
 // - Alle möglichen Fehler immer schön abfangen!
 
-var aufgaben = [
-  {
-    text: "Putzen",
-    erledigt: false
-  },
-  {
-    text: "Trashige Website fertig machen",
-    erledigt: true
-  }
-]
-
-
-var zuErledigen = aufgaben.filter(function(aufgabe) {
-  return aufgabe.erledigt === false;
-});
-
-console.log(zuErledigen.map(text))
+// -> s. "dom-manipulation/aufgabe_js-advanced"
