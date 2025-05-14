@@ -1,0 +1,23 @@
+<!-- Erstellen  Sie  ein  Programm,  das  Ihren  Namen,  Ihr  Alter  und  Ihr  Lieblingsessen  in  der  Konsole 
+einliest. Geben Sie diese Informationen dann in einem Satz aus. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aufgabe2 Selbstlernphase</title>
+</head>
+<body>
+  <input id="eingabeName" type="text" placeholder="Was ist dein Name?" />
+  <input id="eingabeAlter" type="text" placeholder="Was ist dein Alter" />
+  <input id="eingabeEssen" type="text" placeholder="Was ist dein Lieblingsessen?" />
+  <button onclick="verarbeiteEingabe()">Absenden</button>
+  <script>
+    function verarbeiteEingabe() {
+      const eingabeName = document.getElementById("eingabeName").value;
+      const eingabeAlter = document.getElementById("eingabeAlter").value;
+      const eingabeEssen = document.getElementById("eingabeEssen").value;
+      console.log("Dein Name ist: " + eingabeName + "\nDein Alter ist: " + eingabeAlter + "\nDein Lieblingsessen ist: " + eingabeEssen );
+    }
+  </script>
+</body>
+</html>
