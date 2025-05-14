@@ -228,3 +228,5 @@ try {
 // - filtern Sie die noch ausstehenden Aufgaben (filter())!
 // - geben Sie all diese gefilterten Aufgaben als Text in die Console aus (untereinander -> map(), template literals)
 // - Alle möglichen Fehler immer schön abfangen!
+
+// -> s. "dom-manipulation/aufgabe_js-advanced"
