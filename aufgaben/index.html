@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90s Trash-Website</title>
+    <style>
+        body {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            background-color: #ffcc00;
+            color: #ff00ff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 3em;
+            color: #00ffff;
+            text-shadow: 2px 2px #ff0000;
+        }
+        p {
+            font-size: 1.5em;
+            color: #00ff00;
+        }
+        .blink {
+            animation: blinker 1s linear infinite;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+        .rainbow {
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .noise-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url('https://i.imgur.com/wYTCtRu.gif') repeat;
+            opacity: 0.3;
+        }
+        .marquee {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .button {
+            background-color: #00ffff;
+            border: none;
+            color: #ff00ff;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            box-shadow: 0 9px #999;
+        }
+        .button:hover {
+            background-color: #ff00ff;
+            color: #00ffff;
+        }
+        .button:active {
+            background-color: #ff00ff;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body>
+    <div class="noise-background"></div>
+    <h1 class="blink rainbow">Willkommen auf der 90s Trash-Website!</h1>
+    <p class="blink">Hier ist alles so schlecht, dass es gut ist!</p>
+    <div class="marquee">
+        <span>🎵 Lasst uns tanzen und die Nacht verbringen! 🎵</span>
+    </div>
+    <img src="https://i.imgur.com/6aKZzXx.gif" alt="Animated GIF" style="width: 100%; max-width: 400px;">
+    <p class="blink">Klick auf den Button und werde Teil der 90er-Revolution!</p>
+    <button class="button" onclick="alert('Du bist jetzt ein 90er-Fan!')">Klick mich!</button>
+</body>
+</html>
