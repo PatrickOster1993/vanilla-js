@@ -1,0 +1,10 @@
+
+#petForm{
+    border: 2px solid black;
+    padding: 5px;
+    font-family: sans-serif;
+
+    #nameOfPet{
+        margin: 2px;
+    }
+}

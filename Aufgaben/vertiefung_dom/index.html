@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="haustiere.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Haustier-Register</h1>
+    <form id="petForm">
+        <input id="nameOfPet" type="text" placeholder="Name des Haustieres">
+        <br>
+        <input style="margin: 2px;" id="age" type="number" placeholder="Alter">
+        <br>
+        <label style="margin: 2px;" for="city">Wähle deine Stadt:</label>
+        <select style="margin: 2px;" name="city" id="city">
+          <option value="berlin">Berlin</option>
+          <option value="hamburg">Hamburg</option>
+          <option value="munich">München</option>
+        </select>
+        <br>
+        <label style="margin: 2px;" for="hobbies">Lieblingsbeschäftigungen (durch Kommas getrennt):</label>
+        <input type="text" id="hobbies" name="hobbies" placeholder="z. B. Gassi gehen, Schlafen, Apportieren..." size="45">
+        <br>
+        <button id="add">Hinzufügen</button>
+    </form>
+    <div id="petList">
+
+    </div>
+</body>
+</html>
