@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Teilnehmerliste</title>
+</head>
+<body>
+  <h1>Teilnehmer Steckbriefe</h1>
+  <div id="teilnehmerContainer"></div>
+
+  <script>
+    const teilnehmerListe = [
+      { name: "Anna", alter: 28, geschlecht: "w", interessen: ["Lesen", "Sport", "Reisen"] },
+      { name: "Ben", alter: 31, geschlecht: "m", interessen: ["Musik", "Sport"] },
+      { name: "Clara", alter: 22, geschlecht: "w", interessen: ["Kochen", "Kunst"] },
+      { name: "David", alter: 35, geschlecht: "m", interessen: ["Sport", "Technik"] },
+      { name: "Elif", alter: 29, geschlecht: "div", interessen: ["Fotografie", "Sport"] },
+      { name: "Felix", alter: 27, geschlecht: "m", interessen: ["Lesen", "Gaming"] }
+    ];
+
+    const container = document.getElementById("teilnehmerContainer");
+
+    teilnehmerListe.forEach(t => {
+      const div = document.createElement("div");
+      div.style.border = "1px solid black";
+      div.style.padding = "10px";
+      div.style.margin = "10px 0";
+      div.innerHTML = `
+        <strong>${t.name}</strong><br>
+        Alter: ${t.alter}<br>
+        Geschlecht: ${t.geschlecht}<br>
+        Interessen: ${t.interessen.join(", ")}
+      `;
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>
