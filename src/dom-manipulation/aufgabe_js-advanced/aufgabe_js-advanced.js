@@ -4,11 +4,9 @@
 // - filtern Sie die noch ausstehenden Aufgaben (filter())!
 // - geben Sie all diese gefilterten Aufgaben als Text in die Console aus (untereinander -> map(), template literals)
 // - Alle möglichen Fehler immer schön abfangen!
-
-// import { getFilteredElements } from "./utils/filter_elements"
 function getFilteredElements(tasks, id, element) {
-  const outputContainer = document.getElementById("loesung")
-  const offeneAufgaben = aufgaben
+  const outputContainer = document.getElementById(id) // Hier ID korrekt verwenden
+  const offeneAufgaben = tasks
     .filter((aufgabe) => !aufgabe.erledigt)
     .map((aufgabe) => {
       const outputElement = document.createElement(element)
@@ -28,8 +26,8 @@ const aufgaben = [
 ]
 
 try {
-  filteredTasks = getFilteredElements(aufgaben, "loesung1", "h1")
-  filteredTasks = getFilteredElements(aufgaben, "loesung2", "p")
+  getFilteredElements(aufgaben, "loesung1", "h1")
+  getFilteredElements(aufgaben, "loesung2", "p")
 } catch (error) {
   console.error("Error:", error.message)
 }
