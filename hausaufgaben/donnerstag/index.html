@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friday-1</title>
+    <script src="haustiere.js" defer></script>
+    <link rel="stylesheet" href="haustiere.css">
+</head>
+<body>
+    <header>
+        <h1>Haustier-Register</h1>
+    </header>
+    <form id="haustier">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Name des Tieres" name="name" required>
+        <label for="alter">Alter:</label>
+        <input type="number" id ="alter" placeholder="Alter des Tieres" name="alter" required>
+        <label for="tierart">Art:</label>
+        <select id="tierart" name="tierart" required>
+            <option value="">--Tierart wählen--</option>
+            <option value="hund">Hund</option>
+            <option value="katze">Katze</option>
+            <option value="vogel">Vogel</option>
+            <option value="fisch">Fisch</option>
+            <option value="hamster">Hamster</option>
+            <option value="meerschweinchen">Meerschweinchen</option>
+            <option value="kaninchen">Kaninchen</option>
+            <option value="chinchilla">Chinchilla</option>
+            <option value="frettchen">Frettchen</option>
+            <option value="ratte">Ratte</option>
+            <option value="maus">Maus</option>
+            <option value="schildkroete">Schildkröte</option>
+            <option value="leguan">Leguan</option>
+            <option value="schlange">Schlange</option>
+            <option value="spinne">Spinne</option>
+        </select>
+        <label for="aktivitaeten">Hobbies:</label>
+        <textarea id="aktivitaeten" placeholder="Lieblingsbeschäftigungen des Tieres" name="aktivitaeten"></textarea>
+        <button type="submit" id="submitButton">Abschicken</button>
+        <section id="tiereContainer">
+            
+        </section>
+    </form>
+</body>
+</html>
